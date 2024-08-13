@@ -1,0 +1,32 @@
+pretrained_model_path: "/mnt/petrelfs/liuwenran/.cache/huggingface/hub/models--runwayml--stable-diffusion-v1-5/snapshots/ded79e214aa69e42c24d3f5ac14b76d568679cc2"
+pretrained_vae_path: "pretrained_models/sd-vae-ft-mse"
+pretrained_controlnet_path: "pretrained_models/MagicAnimate/densepose_controlnet"
+pretrained_appearance_encoder_path: "pretrained_models/MagicAnimate/appearance_encoder"
+pretrained_unet_path: ""
+
+motion_module: "pretrained_models/MagicAnimate/temporal_attention/temporal_attention.ckpt"
+
+savename: pexels-h
+
+fusion_blocks: "midup"
+
+seed:           [1]
+steps:          25
+guidance_scale: 7.5
+
+source_video_path:
+  - "/mnt/hwfile/mm_lol/liuwenran/pexels-test-case/pexels-test-h/videos"
+densepose_video_path:
+  - "/mnt/hwfile/mm_lol/fangyq/share_data/densepose/pexel-test-h_densepose"
+
+inference_config: "configs/inference/inference.yaml"
+size: 512
+L:    16
+S:    1 
+I:    0
+clip: 0
+offset: 0
+max_length: null
+video_type: "condition"
+invert_video: false
+save_individual_videos: false
